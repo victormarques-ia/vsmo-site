@@ -4,7 +4,6 @@ import styled from 'styled-components'
 export const ExperiencesAndTechnologiesBody = styled.section`
   display: flex;
   justify-content: center;
-  // width: 100%;
 `
 
 export const ArrowDown = styled.img`

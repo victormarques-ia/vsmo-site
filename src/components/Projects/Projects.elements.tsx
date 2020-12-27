@@ -19,7 +19,7 @@ export const ProjectsContent = styled(Content)`
 export const ProjectsWrapper = styled.div`
   overflow-x: auto;
 
-  margin: 1.2rem 0;
+  margin: 2rem 0;
   width: 100%;
   display: grid;
   justify-content: center;

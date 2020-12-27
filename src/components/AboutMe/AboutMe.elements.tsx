@@ -141,19 +141,3 @@ export const IndicatorContainer = styled.div`
     }
   }
 `
-
-export const BgContainer = styled.div`
-  position: fixed;
-
-  width: 100%;
-  height: 100%;
-  z-index: -50;
-
-  top: -8rem;
-`
-
-export const BgImage = styled.img`
-  position: absolute;
-
-  min-width: 100%;
-`

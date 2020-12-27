@@ -11,7 +11,7 @@ import Experiences from './Experiences/Experiences'
 import Technologies from './Technologies/Technologies'
 const ExperiencesAndTechnologies: React.FC = () => {
   return (
-    <ExperiencesAndTechnologiesBody>
+    <ExperiencesAndTechnologiesBody id="experiences_and_technologies">
       <ExperiencesAndTechnologiesContainer>
         <Experiences />
         <Technologies />

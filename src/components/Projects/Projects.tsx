@@ -10,7 +10,7 @@ import Project from './Project/Project'
 
 const Projects: React.FC = () => {
   return (
-    <ProjectsBody>
+    <ProjectsBody id="projects">
       <ProjectsContainer>
         <ProjectsContent title="projects">
           <ProjectsWrapper>

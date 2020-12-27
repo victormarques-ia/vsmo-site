@@ -12,8 +12,6 @@ import {
   AboutMeTitle,
   AboutMeTitleContainer,
   AboutMeWrapper,
-  BgContainer,
-  BgImage,
   IndicatorContainer,
   ScrollDown,
   ArrowDown
@@ -23,10 +21,7 @@ import Photo from '@static/photo.svg'
 
 const AboutMe: React.FC = () => {
   return (
-    <AboutMeWrapper>
-      {/* <BgContainer>
-        <BgImage src="/purplebg_1.svg" />
-      </BgContainer> */}
+    <AboutMeWrapper id="about_me">
       <AboutMeBody>
         <AboutMeContainer>
           <AboutMeTitleContent title="developer">
