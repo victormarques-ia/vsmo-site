@@ -5,9 +5,8 @@ import { Container } from '../../styles/global'
 export const AboutMeWrapper = styled.div`
   position: relative;
   overflow: hidden;
-
-  width: 100%;
   height: 100vh;
+  width: 100%;
 `
 
 export const AboutMeBody = styled.section`
@@ -17,13 +16,17 @@ export const AboutMeBody = styled.section`
   align-items: center;
   justify-content: center;
   margin-top: 12rem;
+
+  @media (max-width: 1023px) {
+    margin-top: 14rem;
+  }
 `
 
 export const AboutMeContainer = styled(Container)`
   display: grid;
 
   grid-template-columns: min-content auto 37rem;
-  grid-template-rows: 67rem 2fr;
+  grid-template-rows: 67rem 1fr;
 
   grid-template-areas:
     'aboutMeTitleContent aboutMePhotoContainer aboutMeDescriptionContent'
@@ -85,7 +88,7 @@ export const AboutMePhoto = styled.div`
 
   @media (max-width: 1023px) {
     svg {
-      min-width: 40rem;
+      max-width: 40rem;
     }
   }
 

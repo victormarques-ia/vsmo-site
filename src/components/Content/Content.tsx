@@ -7,16 +7,16 @@ type WithChildren<T = unknown> = T & { children?: React.ReactNode }
 interface ContentProps {
   title?: string
   children: WithChildren
-  className: string
+  className?: string
 }
 
 const Content: React.FC<ContentProps> = ({
-  title = 'default',
+  title,
   children,
   className
 }: ContentProps) => {
   return (
-    <ContentBody className={className}>
+    <ContentBody className={className || title}>
       <OpenTitle>{`<${title}>`}</OpenTitle>
       {children}
       <CloseTitle>{`</${title}>`}</CloseTitle>

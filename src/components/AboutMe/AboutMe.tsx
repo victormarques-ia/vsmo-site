@@ -29,7 +29,7 @@ const AboutMe: React.FC = () => {
       </BgContainer> */}
       <AboutMeBody>
         <AboutMeContainer>
-          <AboutMeTitleContent title="developer" className="title">
+          <AboutMeTitleContent title="developer">
             <AboutMeTitleContainer>
               <AboutMeTitle>Victor Silva</AboutMeTitle>
             </AboutMeTitleContainer>
@@ -39,7 +39,7 @@ const AboutMe: React.FC = () => {
               <Photo />
             </AboutMePhoto>
           </AboutMePhotoContainer>
-          <AboutMeDescriptionContent title="about me" className="description">
+          <AboutMeDescriptionContent title="about me" className="about-me">
             <AboutMeDescriptionContainer>
               <AboutMeDescription>
                 I am a person passionate about challenges, and that has been

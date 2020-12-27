@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 export const ContentBody = styled.div`
   display: grid;
   grid-template-columns: auto;
