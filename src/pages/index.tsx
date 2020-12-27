@@ -4,9 +4,13 @@ import Navbar from '@components/Navbar/Navbar'
 import AboutMe from '@components/AboutMe/AboutMe'
 import ExperiencesAndTechnologies from '@components/ExperiencesAndTechnologies/ExperiencesAndTechnologies'
 import styled from 'styled-components'
+import Footer from '@components/Footer/Footer'
+import Projects from '@components/Projects/Projects'
 
 const AppWrapper = styled.div`
-  position: relative;
+  display: grid;
+  grid-template-rows: min-content min-content min-content min-content min-content;
+  grid-row-gap: 20rem;
 
   background-image: url('/pplbg.svg');
   background-repeat: no-repeat;
@@ -17,7 +21,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <Head>
-        <title>Homepage</title>
+        <title>Victor Silva</title>
       </Head>
 
       <main>
@@ -25,6 +29,8 @@ const Home: React.FC = () => {
           <Navbar />
           <AboutMe />
           <ExperiencesAndTechnologies />
+          <Projects />
+          <Footer />
         </AppWrapper>
       </main>
     </div>

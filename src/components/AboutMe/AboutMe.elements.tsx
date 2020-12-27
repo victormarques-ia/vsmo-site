@@ -3,9 +3,6 @@ import styled from 'styled-components'
 import { Container } from '../../styles/global'
 
 export const AboutMeWrapper = styled.div`
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
   width: 100%;
 `
 
@@ -15,18 +12,13 @@ export const AboutMeBody = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 12rem;
-
-  @media (max-width: 1023px) {
-    margin-top: 14rem;
-  }
 `
 
 export const AboutMeContainer = styled(Container)`
   display: grid;
 
   grid-template-columns: min-content auto 37rem;
-  grid-template-rows: 67rem 1fr;
+  grid-template-rows: minmax(auto, 67rem) min-content;
 
   grid-template-areas:
     'aboutMeTitleContent aboutMePhotoContainer aboutMeDescriptionContent'
@@ -35,7 +27,7 @@ export const AboutMeContainer = styled(Container)`
   @media (max-width: 1023px) {
     align-items: center;
     grid-template-columns: min-content auto;
-    grid-template-rows: auto auto 1fr 20rem;
+    grid-template-rows: auto auto auto min-content;
     grid-row-gap: 2rem;
     grid-template-areas:
       'aboutMeTitleContent aboutMePhotoContainer'
@@ -137,6 +129,8 @@ export const IndicatorContainer = styled.div`
 
   @media (max-width: 1023px) {
     justify-content: center;
+
+    margin-top: 10rem;
 
     ${ArrowDown} {
       display: initial !important;
