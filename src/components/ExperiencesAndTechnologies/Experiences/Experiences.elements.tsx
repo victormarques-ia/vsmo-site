@@ -9,6 +9,7 @@ interface ExperienceContainerProps
 
 export const ExperiencesContent = styled(Content)`
   width: 100%;
+  grid-area: experiencesContent;
 `
 
 export const ExperiencesTimeline = styled.div`

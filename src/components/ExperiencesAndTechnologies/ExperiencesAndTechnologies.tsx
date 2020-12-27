@@ -1,117 +1,24 @@
 import React from 'react'
 import {
   ExperiencesAndTechnologiesBody,
-  ExperiencesAndTechnologiesContainer
+  ExperiencesAndTechnologiesContainer,
+  ArrowDown,
+  IndicatorContainer,
+  ScrollDown
 } from './ExperiencesAndTechnologies.elements'
 
+import Experiences from './Experiences/Experiences'
+import Technologies from './Technologies/Technologies'
 const ExperiencesAndTechnologies: React.FC = () => {
   return (
     <ExperiencesAndTechnologiesBody>
       <ExperiencesAndTechnologiesContainer>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
-        <h1>alo</h1>
+        <Experiences />
+        <Technologies />
+        <IndicatorContainer>
+          <ArrowDown src="/arrow_down.svg" />
+          <ScrollDown src="/scroll_down.svg" />
+        </IndicatorContainer>
       </ExperiencesAndTechnologiesContainer>
     </ExperiencesAndTechnologiesBody>
   )
