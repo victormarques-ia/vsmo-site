@@ -7,7 +7,6 @@ export const NavbarBody = styled.header`
   align-items: center;
   position: sticky;
 
-  top: 6rem;
   width: 100%;
   top: 0;
   z-index: 100;
@@ -85,7 +84,7 @@ export const NavbarGetInTouchButton = styled.button`
   width: 20rem;
   height: 5rem;
 
-  background-color: ${props => props.theme.colors.background};
+  background-color: rgb(16, 16, 16, 0);
   border: 0.1rem solid ${props => props.theme.colors.text};
   border-radius: 5rem;
 

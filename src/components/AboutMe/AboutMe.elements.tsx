@@ -35,7 +35,7 @@ export const AboutMeContainer = styled(Container)`
   @media (max-width: 1023px) {
     align-items: center;
     grid-template-columns: min-content auto;
-    grid-template-rows: auto auto 1fr 0.8fr;
+    grid-template-rows: auto auto 1fr 20rem;
     grid-row-gap: 2rem;
     grid-template-areas:
       'aboutMeTitleContent aboutMePhotoContainer'
