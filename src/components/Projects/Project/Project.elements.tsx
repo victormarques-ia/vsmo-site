@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-export const ProjectContainer = styled.div`
+
+export const Wrapper = styled.div`
   background-color: #232323;
   max-height: 30rem;
   min-height: 30rem;
@@ -13,7 +14,7 @@ export const ProjectContainer = styled.div`
   width: 100%;
 `
 
-export const ProjectIconContainer = styled.div`
+export const IconContainer = styled.div`
   align-self: center;
 
   svg {
@@ -22,13 +23,13 @@ export const ProjectIconContainer = styled.div`
   }
 `
 
-export const ProjectFooterContainer = styled.div`
+export const FooterContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
 `
-export const ProjectGoToProjectIcon = styled.div``
+export const GoToProjectIcon = styled.div``
 
-export const ProjectName = styled.h3`
+export const Name = styled.h3`
   font: ${props => props.theme.fonts.default};
 `

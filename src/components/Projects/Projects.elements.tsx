@@ -2,21 +2,21 @@ import styled from 'styled-components'
 import { Container } from 'src/styles/global'
 import Content from '@components/Content/Content'
 
-export const ProjectsBody = styled.section`
+export const Wrapper = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
 `
 
-export const ProjectsContainer = styled(Container)``
+export const Body = styled(Container)``
 
-export const ProjectsContent = styled(Content)`
+export const Section = styled(Content)`
   @media (max-width: 1023px) {
     position: relative;
   }
 `
 
-export const ProjectsWrapper = styled.div`
+export const ProjectsContainer = styled.div`
   overflow-x: auto;
 
   margin: 2rem 0;

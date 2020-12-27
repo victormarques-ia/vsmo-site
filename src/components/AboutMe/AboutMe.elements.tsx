@@ -1,12 +1,8 @@
-import Content from '@components/Content/Content'
 import styled from 'styled-components'
+import Content from '@components/Content/Content'
 import { Container } from '../../styles/global'
 
-export const AboutMeWrapper = styled.div`
-  width: 100%;
-`
-
-export const AboutMeBody = styled.section`
+export const Wrapper = styled.section`
   display: flex;
 
   flex-direction: column;
@@ -14,7 +10,7 @@ export const AboutMeBody = styled.section`
   justify-content: center;
 `
 
-export const AboutMeContainer = styled(Container)`
+export const Body = styled(Container)`
   display: grid;
 
   grid-template-columns: min-content auto 37rem;
@@ -37,14 +33,14 @@ export const AboutMeContainer = styled(Container)`
   }
 `
 
-export const AboutMeTitleContent = styled(Content)`
+export const TitleContent = styled(Content)`
   grid-area: aboutMeTitleContent;
 
   align-self: center;
 `
-export const AboutMeTitleContainer = styled.div``
+export const TitleContainer = styled.div``
 
-export const AboutMeTitle = styled.h1`
+export const Title = styled.h1`
   font: ${props => props.theme.fonts.detail};
   font-size: 10.4rem;
   line-height: 96.9%;
@@ -54,7 +50,7 @@ export const AboutMeTitle = styled.h1`
   }
 `
 
-export const AboutMePhotoContainer = styled.div`
+export const PhotoContainer = styled.div`
   grid-area: aboutMePhotoContainer;
 
   position: relative;
@@ -66,7 +62,7 @@ export const AboutMePhotoContainer = styled.div`
     align-items: center;
   }
 `
-export const AboutMePhoto = styled.div`
+export const Photo = styled.div`
   position: absolute;
   z-index: -5;
 
@@ -91,13 +87,13 @@ export const AboutMePhoto = styled.div`
   }
 `
 
-export const AboutMeDescriptionContent = styled(Content)`
+export const DescriptionContent = styled(Content)`
   grid-area: aboutMeDescriptionContent;
 
   align-self: center;
 `
 
-export const AboutMeDescriptionContainer = styled.div`
+export const DescriptionContainer = styled.div`
   display: flex;
   align-items: center;
   white-space: pre-wrap;
@@ -108,7 +104,7 @@ export const AboutMeDescriptionContainer = styled.div`
   }
 `
 
-export const AboutMeDescription = styled.p`
+export const Description = styled.p`
   font: ${props => props.theme.fonts.default};
   @media (max-width: 1023px) {
     max-width: 85%;

@@ -1,28 +1,22 @@
 import React from 'react'
 
-import {
-  ProjectContainer,
-  ProjectIconContainer,
-  ProjectFooterContainer,
-  ProjectName,
-  ProjectGoToProjectIcon
-} from './Project.elements'
+import * as S from './Project.elements'
 
 import ShareIcon from '@static/share.svg'
 
 const Project: React.FC = () => {
   return (
-    <ProjectContainer>
-      <ProjectIconContainer>
+    <S.Wrapper>
+      <S.IconContainer>
         <ShareIcon />
-      </ProjectIconContainer>
-      <ProjectFooterContainer>
-        <ProjectName>Sistema CB</ProjectName>
-        <ProjectGoToProjectIcon>
+      </S.IconContainer>
+      <S.FooterContainer>
+        <S.Name>Sistema CB</S.Name>
+        <S.GoToProjectIcon>
           <ShareIcon />
-        </ProjectGoToProjectIcon>
-      </ProjectFooterContainer>
-    </ProjectContainer>
+        </S.GoToProjectIcon>
+      </S.FooterContainer>
+    </S.Wrapper>
   )
 }
 

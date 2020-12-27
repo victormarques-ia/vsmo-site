@@ -8,7 +8,7 @@ interface TechnologieNameProps
   position?: boolean // true == flex-start, false == flex-end
 }
 
-export const TechnologiesContent = styled(Content)`
+export const Wrapper = styled(Content)`
   grid-area: technologiesContent;
   width: 100%;
 
@@ -18,7 +18,7 @@ export const TechnologiesContent = styled(Content)`
   }
 `
 
-export const TechnologieName = styled.h2<TechnologieNameProps>`
+export const Name = styled.h2<TechnologieNameProps>`
   font: ${props => props.theme.fonts.detail};
   color: ${props => props.theme.colors.text};
   font-size: ${props => (props.size ? 2.4 * props.size : 2.4)}rem;
@@ -47,7 +47,7 @@ export const TechnologieName = styled.h2<TechnologieNameProps>`
   }
 `
 
-export const TechnologiesContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
 

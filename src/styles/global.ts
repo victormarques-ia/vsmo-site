@@ -37,6 +37,17 @@ export default createGlobalStyle`
   }
 
 `
+
+export const AppWrapper = styled.div`
+  display: grid;
+  grid-template-rows: min-content min-content min-content min-content min-content;
+  grid-row-gap: 20rem;
+
+  background-image: url('/pplbg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+`
+
 export const Container = styled.div`
   width: 90vw;
   max-width: 1280px;

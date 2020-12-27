@@ -1,24 +1,19 @@
 import React from 'react'
-import {
-  FooterBody,
-  FooterContainer,
-  FooterText,
-  LinkToDesigner
-} from './Footer.elements'
+import * as S from './Footer.elements'
 
 const Footer: React.FC = () => {
   return (
-    <FooterBody>
-      <FooterContainer>
-        <FooterText>victormarques.ia@gmail.com</FooterText>
-        <FooterText>
-          <LinkToDesigner href="https://www.behance.net/josneto6">
+    <S.Wrapper>
+      <S.Body>
+        <S.Text>victormarques.ia@gmail.com</S.Text>
+        <S.Text>
+          <S.LinkToDesigner href="https://www.behance.net/josneto6">
             designed by José Cordeiro
-          </LinkToDesigner>{' '}
+          </S.LinkToDesigner>{' '}
           {'// copyright © 2020'}
-        </FooterText>
-      </FooterContainer>
-    </FooterBody>
+        </S.Text>
+      </S.Body>
+    </S.Wrapper>
   )
 }
 

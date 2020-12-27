@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import {
-  NavbarBody,
-  NavbarContainer,
-  NavbarMenuOptions,
-  NavbarMenuOption,
-  NavbarMenuLinks,
-  NavbarGetInTouchButton,
-  NavbarMenuLink
-} from './Navbar.elements'
+import * as S from './Navbar.elements'
 
 import GithubIcon from '@static/github.svg'
 import LinkedinIcon from '@static/linkedin.svg'
@@ -46,47 +38,45 @@ const Navbar: React.FC = () => {
   }, [])
 
   return (
-    <NavbarBody>
-      <NavbarContainer>
-        <NavbarMenuOptions>
-          <NavbarMenuOption id="0" href="#about_me" active={selectedSection}>
+    <S.Wrapper>
+      <S.Body>
+        <S.MenuOptions>
+          <S.MenuOption id="0" href="#about_me" active={selectedSection}>
             {'<home>'}
-          </NavbarMenuOption>
-          <NavbarMenuOption
+          </S.MenuOption>
+          <S.MenuOption
             id="1"
             href="#experiences_and_technologies"
             active={selectedSection}
           >
             {'<experiences>'}
-          </NavbarMenuOption>
-          <NavbarMenuOption id="2" href="#projects" active={selectedSection}>
+          </S.MenuOption>
+          <S.MenuOption id="2" href="#projects" active={selectedSection}>
             {'<projects>'}
-          </NavbarMenuOption>
-        </NavbarMenuOptions>
-        <NavbarMenuLinks>
-          <NavbarMenuLink
+          </S.MenuOption>
+        </S.MenuOptions>
+        <S.MenuLinks>
+          <S.MenuLink
             href={'https://github.com/victormarques-ia'}
             target="_blank"
           >
             <GithubIcon />
-          </NavbarMenuLink>
-          <NavbarMenuLink
+          </S.MenuLink>
+          <S.MenuLink
             href={'https://www.linkedin.com/in/victor-silva-6764111a1/'}
             target="_blank"
           >
             <LinkedinIcon />
-          </NavbarMenuLink>
-          <NavbarMenuLink href={'#'} target="_blank">
+          </S.MenuLink>
+          <S.MenuLink href={'#'} target="_blank">
             <EmailIcon />
-          </NavbarMenuLink>
-          <NavbarGetInTouchButton>
-            <NavbarMenuOption style={{ opacity: 1 }}>
-              get in touch
-            </NavbarMenuOption>
-          </NavbarGetInTouchButton>
-        </NavbarMenuLinks>
-      </NavbarContainer>
-    </NavbarBody>
+          </S.MenuLink>
+          <S.GetInTouchButton>
+            <S.MenuOption style={{ opacity: 1 }}>get in touch</S.MenuOption>
+          </S.GetInTouchButton>
+        </S.MenuLinks>
+      </S.Body>
+    </S.Wrapper>
   )
 }
 

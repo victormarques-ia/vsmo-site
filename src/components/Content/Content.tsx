@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ContentBody, OpenTitle, CloseTitle } from './Content.elements'
+import * as S from './Content.elements'
 
 type WithChildren<T = unknown> = T & { children?: React.ReactNode }
 
@@ -16,11 +16,11 @@ const Content: React.FC<ContentProps> = ({
   className
 }: ContentProps) => {
   return (
-    <ContentBody className={className || title}>
-      <OpenTitle>{`<${title}>`}</OpenTitle>
+    <S.Wrapper className={className || title}>
+      <S.OpenTitle>{`<${title}>`}</S.OpenTitle>
       {children}
-      <CloseTitle>{`</${title}>`}</CloseTitle>
-    </ContentBody>
+      <S.CloseTitle>{`</${title}>`}</S.CloseTitle>
+    </S.Wrapper>
   )
 }
 

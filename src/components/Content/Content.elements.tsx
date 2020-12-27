@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ContentBody = styled.div`
+export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: min-content min-content min-content;

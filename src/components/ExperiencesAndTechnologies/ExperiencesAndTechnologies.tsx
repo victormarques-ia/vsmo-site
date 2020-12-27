@@ -1,26 +1,20 @@
 import React from 'react'
-import {
-  ExperiencesAndTechnologiesBody,
-  ExperiencesAndTechnologiesContainer,
-  ArrowDown,
-  IndicatorContainer,
-  ScrollDown
-} from './ExperiencesAndTechnologies.elements'
+import * as S from './ExperiencesAndTechnologies.elements'
 
 import Experiences from './Experiences/Experiences'
 import Technologies from './Technologies/Technologies'
 const ExperiencesAndTechnologies: React.FC = () => {
   return (
-    <ExperiencesAndTechnologiesBody id="experiences_and_technologies">
-      <ExperiencesAndTechnologiesContainer>
+    <S.Wrapper id="experiences_and_technologies">
+      <S.Body>
         <Experiences />
         <Technologies />
-        <IndicatorContainer>
-          <ArrowDown src="/arrow_down.svg" />
-          <ScrollDown src="/scroll_down.svg" />
-        </IndicatorContainer>
-      </ExperiencesAndTechnologiesContainer>
-    </ExperiencesAndTechnologiesBody>
+        <S.IndicatorContainer>
+          <S.ArrowDown src="/arrow_down.svg" />
+          <S.ScrollDown src="/scroll_down.svg" />
+        </S.IndicatorContainer>
+      </S.Body>
+    </S.Wrapper>
   )
 }
 

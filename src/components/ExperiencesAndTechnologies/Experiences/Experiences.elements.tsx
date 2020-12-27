@@ -7,7 +7,7 @@ interface ExperienceContainerProps
   sideByLeft?: boolean // false == left: 0, true == left: 50%
 }
 
-export const ExperiencesContent = styled(Content)`
+export const Wrapper = styled(Content)`
   grid-area: experiencesContent;
   width: 100%;
 
@@ -16,7 +16,7 @@ export const ExperiencesContent = styled(Content)`
   }
 `
 
-export const ExperiencesTimeline = styled.div`
+export const Timeline = styled.div`
   position: relative;
   min-height: 40vh;
   margin: 0 auto;
@@ -33,7 +33,7 @@ export const ExperiencesTimeline = styled.div`
   }
 `
 
-export const ExperiencesContainer = styled.div`
+export const Container = styled.div`
   display: grid;
 
   margin-top: 2rem;
@@ -75,13 +75,13 @@ export const ExperienceContainer = styled.div<ExperienceContainerProps>`
   }
 `
 
-export const ExperienceDate = styled.h3`
+export const Date = styled.h3`
   grid-area: experienceDate;
   min-width: 10rem;
   font: ${props => props.theme.fonts.detail};
   color: ${props => props.theme.colors.primary};
 `
-export const ExperienceTitle = styled.h2`
+export const Title = styled.h2`
   grid-area: experienceTitle;
   min-width: 10rem;
   font: ${props => props.theme.fonts.detail};

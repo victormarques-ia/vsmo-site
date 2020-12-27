@@ -1,19 +1,14 @@
 import React from 'react'
-import {
-  ProjectsBody,
-  ProjectsContainer,
-  ProjectsContent,
-  ProjectsWrapper
-} from './Projects.elements'
+import * as S from './Projects.elements'
 
 import Project from './Project/Project'
 
 const Projects: React.FC = () => {
   return (
-    <ProjectsBody id="projects">
-      <ProjectsContainer>
-        <ProjectsContent title="projects">
-          <ProjectsWrapper>
+    <S.Wrapper id="projects">
+      <S.Body>
+        <S.Section title="projects">
+          <S.ProjectsContainer>
             <Project />
             <Project />
             <Project />
@@ -21,10 +16,10 @@ const Projects: React.FC = () => {
             <Project />
             <Project />
             <Project />
-          </ProjectsWrapper>
-        </ProjectsContent>
-      </ProjectsContainer>
-    </ProjectsBody>
+          </S.ProjectsContainer>
+        </S.Section>
+      </S.Body>
+    </S.Wrapper>
   )
 }
 

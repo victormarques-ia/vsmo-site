@@ -1,6 +1,7 @@
 import { Container } from 'src/styles/global'
 import styled from 'styled-components'
-export const FooterBody = styled.footer`
+
+export const Wrapper = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +13,7 @@ export const FooterBody = styled.footer`
     margin-bottom: 4rem;
   }
 `
-export const FooterContainer = styled(Container)`
+export const Body = styled(Container)`
   display: flex;
   justify-content: space-between;
   opacity: 0.4;
@@ -27,7 +28,7 @@ export const FooterContainer = styled(Container)`
   }
 `
 
-export const FooterText = styled.h3`
+export const Text = styled.h3`
   font: ${props => props.theme.fonts.default};
   color: ${props => props.theme.colors.text};
 `

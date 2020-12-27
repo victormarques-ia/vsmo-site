@@ -1,7 +1,7 @@
 import { Container } from 'src/styles/global'
 import styled from 'styled-components'
 
-export const ExperiencesAndTechnologiesBody = styled.section`
+export const Wrapper = styled.section`
   display: flex;
   justify-content: center;
 `
@@ -33,7 +33,7 @@ export const IndicatorContainer = styled.div`
   }
 `
 
-export const ExperiencesAndTechnologiesContainer = styled(Container)`
+export const Body = styled(Container)`
   display: grid;
   justify-content: center;
   grid-column-gap: 12rem;

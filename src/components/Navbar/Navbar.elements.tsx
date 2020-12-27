@@ -6,7 +6,7 @@ interface NavbarMenuOptionProps
   extends React.DetailsHTMLAttributes<HTMLAttributes<HTMLLinkElement>> {
   active?: number // 0 == about_me, 1 == experiences_and_technologies, 2 == projects
 }
-export const NavbarBody = styled.header`
+export const Wrapper = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@ export const NavbarBody = styled.header`
   backdrop-filter: blur(0.1rem);
   -webkit-backdrop-filter: blur(0.1rem);
 `
-export const NavbarContainer = styled(Container)`
+export const Body = styled(Container)`
   display: grid;
   align-items: center;
 
@@ -35,7 +35,7 @@ export const NavbarContainer = styled(Container)`
   }
 `
 
-export const NavbarMenuOptions = styled.div`
+export const MenuOptions = styled.div`
   grid-area: navbarMenuOptions;
 
   display: grid;
@@ -54,7 +54,7 @@ export const NavbarMenuOptions = styled.div`
   }
 `
 
-export const NavbarMenuOption = styled.a<NavbarMenuOptionProps>`
+export const MenuOption = styled.a<NavbarMenuOptionProps>`
   font: ${props => props.theme.fonts.navbar};
   color: ${props => props.theme.colors.text};
 
@@ -65,7 +65,7 @@ export const NavbarMenuOption = styled.a<NavbarMenuOptionProps>`
   cursor: pointer;
 `
 
-export const NavbarMenuLinks = styled.div`
+export const MenuLinks = styled.div`
   grid-area: navbarMenuLinks;
 
   display: grid;
@@ -83,13 +83,13 @@ export const NavbarMenuLinks = styled.div`
   }
 `
 
-export const NavbarMenuLink = styled.a`
+export const MenuLink = styled.a`
   text-decoration: none;
 
   cursor: pointer;
 `
 
-export const NavbarGetInTouchButton = styled.button`
+export const GetInTouchButton = styled.button`
   width: 20rem;
   height: 5rem;
 

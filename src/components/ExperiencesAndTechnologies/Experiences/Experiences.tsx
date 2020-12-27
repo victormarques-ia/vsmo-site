@@ -1,36 +1,27 @@
 import React from 'react'
 
-import {
-  ExperiencesContainer,
-  ExperienceContainer,
-  ExperienceDate,
-  ExperienceTitle,
-  ExperiencesContent,
-  ExperiencesTimeline
-} from './Experiences.elements'
+import * as S from './Experiences.elements'
 
 const Experiences: React.FC = () => {
   return (
-    <ExperiencesContent title="experiences">
-      <ExperiencesTimeline>
-        <ExperiencesContainer>
-          <ExperienceContainer sideByLeft={true}>
-            <ExperienceDate>2019-now</ExperienceDate>
-            <ExperienceTitle>
-              Computer Engineering undergraduate at CIn/UFPE
-            </ExperienceTitle>
-          </ExperienceContainer>
-          <ExperienceContainer sideByLeft={false}>
-            <ExperienceDate>2020-now</ExperienceDate>
-            <ExperienceTitle>Full Stack Developer at CITi</ExperienceTitle>
-          </ExperienceContainer>
-          <ExperienceContainer sideByLeft={true}>
-            <ExperienceDate>2021-now</ExperienceDate>
-            <ExperienceTitle>Tech Lead at CITi</ExperienceTitle>
-          </ExperienceContainer>
-        </ExperiencesContainer>
-      </ExperiencesTimeline>
-    </ExperiencesContent>
+    <S.Wrapper title="experiences">
+      <S.Timeline>
+        <S.Container>
+          <S.ExperienceContainer sideByLeft={true}>
+            <S.Date>2019-now</S.Date>
+            <S.Title>Computer Engineering undergraduate at CIn/UFPE</S.Title>
+          </S.ExperienceContainer>
+          <S.ExperienceContainer sideByLeft={false}>
+            <S.Date>2020-now</S.Date>
+            <S.Title>Full Stack Developer at CITi</S.Title>
+          </S.ExperienceContainer>
+          <S.ExperienceContainer sideByLeft={true}>
+            <S.Date>2021-now</S.Date>
+            <S.Title>Tech Lead at CITi</S.Title>
+          </S.ExperienceContainer>
+        </S.Container>
+      </S.Timeline>
+    </S.Wrapper>
   )
 }
 
