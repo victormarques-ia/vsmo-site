@@ -5,6 +5,7 @@ import styled from 'styled-components'
 interface TechnologieNameProps
   extends React.DetailsHTMLAttributes<HTMLAttributes<HTMLHeadingElement>> {
   size?: number
+  position?: boolean // true == flex-start, false == flex-end
 }
 
 export const TechnologiesContent = styled(Content)`
@@ -16,9 +17,15 @@ export const TechnologieName = styled.h2<TechnologieNameProps>`
   font: ${props => props.theme.fonts.detail};
   color: ${props => props.theme.colors.text};
   font-size: ${props => (props.size ? 2.4 * props.size : 2.4)}rem;
+  padding: 0.5rem 0;
 
   opacity: 0.7;
   transition: 0.2s;
+
+  align-self: ${props => (props.position ? 'flex-start' : 'flex-end')};
+
+  margin-left: ${props => (props.position ? props.size * 2 : 0)}rem;
+  margin-right: ${props => (!props.position ? props.size * 2 : 0)}rem;
 
   cursor: pointer;
 
@@ -36,6 +43,15 @@ export const TechnologieName = styled.h2<TechnologieNameProps>`
 `
 
 export const TechnologiesContainer = styled.div`
-  column-count: 2;
-  column-fill: auto;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1023px) {
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  @media (max-width: 500px) {
+    width: 80%;
+  }
 `
