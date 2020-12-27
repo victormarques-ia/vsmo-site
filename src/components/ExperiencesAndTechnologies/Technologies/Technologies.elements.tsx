@@ -9,8 +9,13 @@ interface TechnologieNameProps
 }
 
 export const TechnologiesContent = styled(Content)`
-  width: 100%;
   grid-area: technologiesContent;
+  width: 100%;
+
+  @media (max-width: 1023px) {
+    max-width: 70%;
+    margin: 0 30%;
+  }
 `
 
 export const TechnologieName = styled.h2<TechnologieNameProps>`

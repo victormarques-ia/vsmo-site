@@ -8,8 +8,12 @@ interface ExperienceContainerProps
 }
 
 export const ExperiencesContent = styled(Content)`
-  width: 100%;
   grid-area: experiencesContent;
+  width: 100%;
+
+  @media (max-width: 1023px) {
+    max-width: 70%;
+  }
 `
 
 export const ExperiencesTimeline = styled.div`
