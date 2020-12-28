@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
     const elHeight = el.offsetHeight
     const pageTop = window.pageYOffset
 
-    if (pageTop > elTop - 100 && pageTop < elTop + elHeight - 100) {
+    if (pageTop > elTop - 150 && pageTop < elTop + elHeight - 100) {
       return true
     }
     return false

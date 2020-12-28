@@ -6,6 +6,7 @@ export const Wrapper = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
+  padding-top: 20rem;
 `
 
 export const Body = styled(Container)``

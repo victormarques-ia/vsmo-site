@@ -12,6 +12,8 @@ export const Wrapper = styled.footer`
   @media (max-width: 1023px) {
     margin-bottom: 4rem;
   }
+
+  padding-top: 20rem;
 `
 export const Body = styled(Container)`
   display: flex;

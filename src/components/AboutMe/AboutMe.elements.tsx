@@ -8,6 +8,7 @@ export const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 15rem;
 `
 
 export const Body = styled(Container)`

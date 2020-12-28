@@ -21,7 +21,6 @@ export default createGlobalStyle`
     color: ${props => props.theme.colors.text};
     font: ${props => props.theme.fonts.default};
     overflow-x: hidden;
-
   }
 
   @media (max-width: 1023px) {
@@ -40,8 +39,8 @@ export default createGlobalStyle`
 
 export const AppWrapper = styled.div`
   display: grid;
-  grid-template-rows: min-content min-content min-content min-content min-content;
-  grid-row-gap: 20rem;
+  grid-template-rows: min-content min-content min-content min-content;
+  //grid-row-gap: 20rem;
 
   background-image: url('/pplbg.svg');
   background-repeat: no-repeat;

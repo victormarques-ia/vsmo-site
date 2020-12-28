@@ -4,33 +4,7 @@ import styled from 'styled-components'
 export const Wrapper = styled.section`
   display: flex;
   justify-content: center;
-`
-
-export const ArrowDown = styled.img`
-  display: none;
-`
-export const ScrollDown = styled.img``
-
-export const IndicatorContainer = styled.div`
-  grid-area: indicatorContainer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-top: 20rem;
-
-  @media (max-width: 1023px) {
-    justify-content: center;
-
-    ${ArrowDown} {
-      display: initial !important;
-    }
-
-    ${ScrollDown} {
-      display: none !important;
-    }
-  }
+  padding-top: 20rem;
 `
 
 export const Body = styled(Container)`
@@ -53,5 +27,33 @@ export const Body = styled(Container)`
       'experiencesContent experiencesContent'
       'technologiesContent technologiesContent'
       'indicatorContainer indicatorContainer';
+  }
+`
+export const ArrowDown = styled.img`
+  display: none;
+`
+export const ScrollDown = styled.img``
+
+export const IndicatorContainer = styled.div`
+  grid-area: indicatorContainer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 20rem;
+
+  @media (max-width: 1023px) {
+    justify-content: center;
+
+    margin-top: 10rem;
+
+    ${ArrowDown} {
+      display: initial !important;
+    }
+
+    ${ScrollDown} {
+      display: none !important;
+    }
   }
 `
