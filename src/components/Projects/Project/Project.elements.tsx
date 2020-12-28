@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  opacity: 0.6;
+  opacity: 0.7;
   transition: 0.2s;
 
   &:hover {
     opacity: 1;
   }
   cursor: pointer;
+
+  @media (max-width: 767px) {
+    opacity: 1;
+  }
 `
 
 export const Body = styled.div`
@@ -22,6 +26,12 @@ export const Body = styled.div`
   grid-template-rows: 1fr min-content;
   justify-items: center;
   width: 100%;
+
+  @media (max-width: 767px) {
+    max-height: 40rem;
+    width: 30rem;
+    height: 40rem;
+  }
 `
 
 export const BottomLine = styled.div`
@@ -34,8 +44,8 @@ export const IconContainer = styled.div`
 `
 
 export const Icon = styled.img`
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 6.4rem;
+  height: 6.4rem;
 `
 
 export const FooterContainer = styled.div`

@@ -19,8 +19,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
+      "@static/*": ["public/*"],
       "@components/*": ["./src/components/*"],
-      "@static/*": ["public/*"]
+      "@utils/*": ["./src/utils/*"],
     }
   },
   "include": [

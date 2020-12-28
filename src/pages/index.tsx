@@ -7,9 +7,16 @@ import {
   Navbar,
   AboutMe,
   ExperiencesAndTechnologies,
-  Projects,
   Footer
-} from '../components'
+} from '@components/index'
+import dynamic from 'next/dynamic'
+
+const Projects = dynamic(
+  () => {
+    return import('@components/Projects/Projects')
+  },
+  { ssr: false }
+)
 const Home: React.FC = () => {
   return (
     <div>

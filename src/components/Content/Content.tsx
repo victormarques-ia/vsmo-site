@@ -2,7 +2,7 @@ import React from 'react'
 
 import * as S from './Content.elements'
 
-type WithChildren<T = unknown> = T & { children?: React.ReactNode }
+import { WithChildren } from '@utils/customTypes'
 
 interface ContentProps {
   title?: string

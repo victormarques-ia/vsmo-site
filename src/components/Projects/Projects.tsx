@@ -1,9 +1,13 @@
+/* eslint-disable multiline-ternary */
 import React from 'react'
 import * as S from './Projects.elements'
 
 import Project from './Project/Project'
 
+import useWindowSize from '@utils/useWindowSize'
+
 import Icon from './icons'
+import MotionSlider from './MotionSlider'
 
 const projectsData = [
   {
@@ -43,21 +47,37 @@ const projectsData = [
     url: 'https://github.com/victormarques-ia/game_streaming_flutter'
   }
 ]
-
 const Projects: React.FC = () => {
+  const windowDimensions = useWindowSize()
+
   return (
     <S.Wrapper id="projects">
       <S.Body>
         <S.Section title="projects">
           <S.ProjectsContainer>
-            {projectsData?.map(project => (
-              <Project
-                key={project.id}
-                projectName={project.name}
-                projectIcon={project.icon}
-                projectUrl={project.url}
-              />
-            ))}
+            {windowDimensions.innerWidth > 767 ? (
+              <>
+                {projectsData?.map(project => (
+                  <Project
+                    key={project.id}
+                    projectName={project.name}
+                    projectIcon={project.icon}
+                    projectUrl={project.url}
+                  />
+                ))}
+              </>
+            ) : (
+              <MotionSlider padding={30} gap={30}>
+                {projectsData?.map(project => (
+                  <Project
+                    key={project.id}
+                    projectName={project.name}
+                    projectIcon={project.icon}
+                    projectUrl={project.url}
+                  />
+                ))}
+              </MotionSlider>
+            )}
           </S.ProjectsContainer>
         </S.Section>
       </S.Body>

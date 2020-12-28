@@ -40,9 +40,8 @@ export default createGlobalStyle`
 export const AppWrapper = styled.div`
   display: grid;
   grid-template-rows: min-content min-content min-content min-content;
-  //grid-row-gap: 20rem;
 
-  background-image: url('/pplbg.svg');
+  background-image: url('/bg.png');
   background-repeat: no-repeat;
   background-size: cover;
 `

@@ -7,8 +7,9 @@ module.exports = {
       "module-resolver",
       {
         "alias": {
+          "@static": "./public",
           "@components": "./src/components",
-          "@static": "./public"
+          "@utils": "./src/utils"
         }
       }
     ]

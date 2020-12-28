@@ -18,9 +18,10 @@ export const Section = styled(Content)`
 `
 
 export const ProjectsContainer = styled.div`
-  overflow-x: auto;
+  overflow-x: hidden;
 
   margin: 2rem 0;
+
   width: 100%;
   display: grid;
   justify-content: center;
@@ -31,8 +32,8 @@ export const ProjectsContainer = styled.div`
     display: none;
   }
 
-  @media (max-width: 1023px) {
-    grid-template-columns: 1fr;
-    grid-auto-flow: column;
+  @media (max-width: 767px) {
+    display: initial;
+    margin: auto;
   }
 `
