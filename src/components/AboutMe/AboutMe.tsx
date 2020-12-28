@@ -32,7 +32,9 @@ const AboutMe: React.FC = () => {
           </S.DescriptionContainer>
         </S.DescriptionContent>
         <S.IndicatorContainer>
-          <S.ArrowDown src="/arrow_down.svg" />
+          <S.LinkToSection href="#experiences_and_technologies">
+            <S.ArrowDown src="/arrow_down.svg" />
+          </S.LinkToSection>
           <S.ScrollDown src="/scroll_down.svg" />
         </S.IndicatorContainer>
       </S.Body>

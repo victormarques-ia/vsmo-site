@@ -29,6 +29,11 @@ export const Body = styled(Container)`
       'indicatorContainer indicatorContainer';
   }
 `
+
+export const LinkToSection = styled.a`
+  text-decoration: none;
+`
+
 export const ArrowDown = styled.img`
   display: none;
 `

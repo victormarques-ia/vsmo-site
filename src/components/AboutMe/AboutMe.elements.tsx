@@ -112,6 +112,10 @@ export const Description = styled.p`
   }
 `
 
+export const LinkToSection = styled.a`
+  text-decoration: none;
+`
+
 export const ArrowDown = styled.img`
   display: none;
 `

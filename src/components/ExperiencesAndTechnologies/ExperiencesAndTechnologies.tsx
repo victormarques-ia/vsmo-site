@@ -10,7 +10,9 @@ const ExperiencesAndTechnologies: React.FC = () => {
         <Experiences />
         <Technologies />
         <S.IndicatorContainer>
-          <S.ArrowDown src="/arrow_down.svg" />
+          <S.LinkToSection href="#projects">
+            <S.ArrowDown src="/arrow_down.svg" />
+          </S.LinkToSection>
           <S.ScrollDown src="/scroll_down.svg" />
         </S.IndicatorContainer>
       </S.Body>
