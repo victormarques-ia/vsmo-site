@@ -72,24 +72,40 @@ export const MenuLinks = styled.div`
   align-items: center;
   justify-content: flex-end;
 
-  grid-column-gap: 4.2rem;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(4, min-content);
+  grid-column-gap: 4.2rem;
 
   @media (max-width: 1023px) {
     justify-content: flex-start;
     align-items: center;
-    grid-template-columns: repeat(3, min-content);
+    grid-template-columns: repeat(4, min-content);
+    grid-column-gap: 3.2rem;
   }
 `
 
 export const MenuLink = styled.a`
+  display: ${props => (props.id === 'email_icon' ? 'none' : 'initial')};
   text-decoration: none;
 
   cursor: pointer;
+
+  svg {
+    width: 2.4rem;
+    path {
+      fill: ${props => props.theme.colors.text};
+    }
+  }
+
+  @media (max-width: 1023px) {
+    display: initial;
+  }
 `
 
-export const GetInTouchButton = styled.button`
+export const GetInTouchButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20rem;
   height: 5rem;
 
@@ -99,6 +115,7 @@ export const GetInTouchButton = styled.button`
 
   outline: none;
   cursor: pointer;
+  text-decoration: none;
 
   @media (max-width: 1023px) {
     display: none;

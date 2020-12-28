@@ -5,10 +5,13 @@ import * as S from './Navbar.elements'
 import GithubIcon from '@static/github.svg'
 import LinkedinIcon from '@static/linkedin.svg'
 import EmailIcon from '@static/email.svg'
+import DevIcon from '@static/dev.svg'
 
 const navbarData = {
   githubUrl: 'https://github.com/victormarques-ia',
-  linkedinUrl: 'https://www.linkedin.com/in/victor-silva-6764111a1/'
+  linkedinUrl: 'https://www.linkedin.com/in/victor-silva-6764111a1/',
+  devToUrl: 'https://dev.to/victormarquesia',
+  email: 'victormarques.ia@gmail.com'
 }
 
 const Navbar: React.FC = () => {
@@ -67,10 +70,20 @@ const Navbar: React.FC = () => {
           <S.MenuLink href={navbarData?.linkedinUrl} target="_blank">
             <LinkedinIcon />
           </S.MenuLink>
-          <S.MenuLink href={'#'} target="_blank">
+          <S.MenuLink id="dev_icon" href={navbarData.devToUrl} target="_blank">
+            <DevIcon />
+          </S.MenuLink>
+          <S.MenuLink
+            id="email_icon"
+            href={`mailto:${navbarData.email}?Subject=Hello%20Victor`}
+            target="_top"
+          >
             <EmailIcon />
           </S.MenuLink>
-          <S.GetInTouchButton>
+          <S.GetInTouchButton
+            href={`mailto:${navbarData.email}?Subject=Hello%20Victor`}
+            target="_top"
+          >
             <S.MenuOption style={{ opacity: 1 }}>get in touch</S.MenuOption>
           </S.GetInTouchButton>
         </S.MenuLinks>
