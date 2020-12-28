@@ -1,3 +1,4 @@
+/* eslint-disable multiline-ternary */
 import React, { useState, useEffect } from 'react'
 
 import * as S from './Navbar.elements'
@@ -6,6 +7,7 @@ import GithubIcon from '@static/github.svg'
 import LinkedinIcon from '@static/linkedin.svg'
 import EmailIcon from '@static/email.svg'
 import DevIcon from '@static/dev.svg'
+import useWindowSize from '@utils/useWindowSize'
 
 const navbarData = {
   githubUrl: 'https://github.com/victormarques-ia',
@@ -16,6 +18,7 @@ const navbarData = {
 
 const Navbar: React.FC = () => {
   const [selectedSection, setSelectedSection] = useState(0)
+  const windowDimensions = useWindowSize()
   const elementInViewport = el => {
     const elTop = el.offsetTop
     const elHeight = el.offsetHeight
@@ -73,19 +76,22 @@ const Navbar: React.FC = () => {
           <S.MenuLink id="dev_icon" href={navbarData.devToUrl} target="_blank">
             <DevIcon />
           </S.MenuLink>
-          <S.MenuLink
-            id="email_icon"
-            href={`mailto:${navbarData.email}?Subject=Hello%20Victor`}
-            target="_top"
-          >
-            <EmailIcon />
-          </S.MenuLink>
-          <S.GetInTouchButton
-            href={`mailto:${navbarData.email}?Subject=Hello%20Victor`}
-            target="_top"
-          >
-            <S.MenuOption style={{ opacity: 1 }}>get in touch</S.MenuOption>
-          </S.GetInTouchButton>
+          {windowDimensions.innerWidth < 1023 ? (
+            <S.MenuLink
+              href={`mailto:${navbarData.email}?Subject=Hello%20Victor`}
+              target="_top"
+            >
+              <EmailIcon />
+            </S.MenuLink>
+          ) : (
+            <S.GetInTouchButton
+              href={`mailto:${navbarData.email}?Subject=Hello%20Victor`}
+              target="_top"
+              style={{ opacity: 1 }}
+            >
+              get in touch
+            </S.GetInTouchButton>
+          )}
         </S.MenuLinks>
       </S.Body>
     </S.Wrapper>

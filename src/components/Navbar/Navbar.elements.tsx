@@ -85,7 +85,6 @@ export const MenuLinks = styled.div`
 `
 
 export const MenuLink = styled.a`
-  display: ${props => (props.id === 'email_icon' ? 'none' : 'initial')};
   text-decoration: none;
 
   cursor: pointer;
@@ -96,10 +95,6 @@ export const MenuLink = styled.a`
       fill: ${props => props.theme.colors.text};
     }
   }
-
-  @media (max-width: 1023px) {
-    display: initial;
-  }
 `
 
 export const GetInTouchButton = styled.a`
@@ -109,15 +104,13 @@ export const GetInTouchButton = styled.a`
   width: 20rem;
   height: 5rem;
 
-  background-color: rgb(16, 16, 16, 0);
+  font: ${props => props.theme.fonts.navbar};
+  color: ${props => props.theme.colors.text};
+  background-color: rgba(16, 16, 16, 0);
   border: 0.1rem solid ${props => props.theme.colors.text};
   border-radius: 5rem;
 
   outline: none;
   cursor: pointer;
   text-decoration: none;
-
-  @media (max-width: 1023px) {
-    display: none;
-  }
 `

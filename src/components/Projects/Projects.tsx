@@ -1,5 +1,6 @@
 /* eslint-disable multiline-ternary */
 import React from 'react'
+import dynamic from 'next/dynamic'
 import * as S from './Projects.elements'
 
 import Project from './Project/Project'
@@ -7,8 +8,6 @@ import Project from './Project/Project'
 import useWindowSize from '@utils/useWindowSize'
 
 import Icon from './icons'
-import MotionSlider from './MotionSlider'
-
 const projectsData = [
   {
     id: 1,
@@ -47,6 +46,11 @@ const projectsData = [
     url: 'https://github.com/victormarques-ia/game_streaming_flutter'
   }
 ]
+
+const MotionSlider = dynamic(() => import('./MotionSlider'), {
+  ssr: false
+})
+
 const Projects: React.FC = () => {
   const windowDimensions = useWindowSize()
 

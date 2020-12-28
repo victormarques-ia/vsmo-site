@@ -1,10 +1,11 @@
 import React, { HTMLAttributes } from 'react'
-import dynamic from 'next/dynamic'
+
 import styled from 'styled-components'
 import { useMotionValue } from 'framer-motion'
 
 import { MotionContextProvider } from './MotionSliderContext'
 
+import SliderTrack from './SliderTrack/SliderTrack'
 import SliderItem from './SliderItem/SliderItem'
 
 import { WithChildren } from '@utils/customTypes'
@@ -27,12 +28,7 @@ interface MotionSliderProps {
   allowSlideToLast?: boolean
   overflow?: string
 }
-const SliderTrack = dynamic(
-  () => {
-    return import('./SliderTrack/SliderTrack')
-  },
-  { ssr: false }
-)
+
 const MotionSlider: React.FC<MotionSliderProps> = ({
   children,
   padding = 40,

@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 
 interface WindowSizeProps {
-  innerHeight: number
-  innerWidth: number
-  outerHeight: number
-  outerWidth: number
+  innerHeight: number | undefined
+  innerWidth: number | undefined
+  outerHeight: number | undefined
+  outerWidth: number | undefined
 }
 
 function getSize() {
@@ -17,16 +17,22 @@ function getSize() {
 }
 
 const useWindowSize = (): WindowSizeProps => {
-  const [windowSize, setWindowSize] = useState(getSize())
-
-  const handleResize = () => {
-    setWindowSize(getSize())
-  }
-
+  const [windowSize, setWindowSize] = useState<WindowSizeProps>({
+    innerHeight: undefined,
+    innerWidth: undefined,
+    outerHeight: undefined,
+    outerWidth: undefined
+  })
   useEffect(() => {
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setWindowSize(getSize())
+      }
+      window.addEventListener('resize', handleResize)
+      handleResize()
+      return () => {
+        window.removeEventListener('resize', handleResize)
+      }
     }
   }, [])
 
