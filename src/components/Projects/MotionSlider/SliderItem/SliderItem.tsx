@@ -41,7 +41,6 @@ const SliderItem: React.FC<SliderItemProps> = ({
 
   useEffect(() => {
     if (x !== undefined) {
-      // dispatch({ type: 'ADD_ITEM', item: x - padding })
       addItem(x - padding)
     }
   }, [x, padding])
