@@ -6,6 +6,11 @@ import GithubIcon from '@static/github.svg'
 import LinkedinIcon from '@static/linkedin.svg'
 import EmailIcon from '@static/email.svg'
 
+const navbarData = {
+  githubUrl: 'https://github.com/victormarques-ia',
+  linkedinUrl: 'https://www.linkedin.com/in/victor-silva-6764111a1/'
+}
+
 const Navbar: React.FC = () => {
   const [selectedSection, setSelectedSection] = useState(0)
   const elementInViewport = el => {
@@ -56,16 +61,10 @@ const Navbar: React.FC = () => {
           </S.MenuOption>
         </S.MenuOptions>
         <S.MenuLinks>
-          <S.MenuLink
-            href={'https://github.com/victormarques-ia'}
-            target="_blank"
-          >
+          <S.MenuLink href={navbarData?.githubUrl} target="_blank">
             <GithubIcon />
           </S.MenuLink>
-          <S.MenuLink
-            href={'https://www.linkedin.com/in/victor-silva-6764111a1/'}
-            target="_blank"
-          >
+          <S.MenuLink href={navbarData?.linkedinUrl} target="_blank">
             <LinkedinIcon />
           </S.MenuLink>
           <S.MenuLink href={'#'} target="_blank">
