@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react'
 
 import * as S from './Navbar.elements'
 
+import { container, textVerticalAnimation } from '@utils/animations'
+
 import GithubIcon from '@static/github.svg'
 import LinkedinIcon from '@static/linkedin.svg'
 import EmailIcon from '@static/email.svg'
@@ -35,51 +37,84 @@ const Navbar: React.FC = () => {
       (sectionName, index) => {
         const el = document.getElementById(sectionName)
         if (elementInViewport(el)) {
+          console.log(el.id)
           setSelectedSection(index)
         }
       }
     )
   }
-
   useEffect(() => {
     document.addEventListener('scroll', handleScroll)
     return () => {
       document.addEventListener('scroll', handleScroll)
     }
   }, [])
-
   return (
-    <S.Wrapper>
+    <S.Wrapper variants={container} initial="hidden" animate="visible">
       <S.Body>
         <S.MenuOptions>
-          <S.MenuOption id="0" href="#about_me" active={selectedSection}>
+          <S.MenuOption
+            id="0"
+            href="#about_me"
+            active={selectedSection}
+            variants={textVerticalAnimation}
+          >
             {'<home>'}
           </S.MenuOption>
           <S.MenuOption
             id="1"
             href="#experiences_and_technologies"
             active={selectedSection}
+            variants={textVerticalAnimation}
           >
             {'<experiences>'}
           </S.MenuOption>
-          <S.MenuOption id="2" href="#projects" active={selectedSection}>
+          <S.MenuOption
+            id="2"
+            href="#projects"
+            active={selectedSection}
+            variants={textVerticalAnimation}
+          >
             {'<projects>'}
           </S.MenuOption>
         </S.MenuOptions>
         <S.MenuLinks>
-          <S.MenuLink href={navbarData?.githubUrl} target="_blank">
+          <S.MenuLink
+            href={navbarData?.githubUrl}
+            target="_blank"
+            variants={textVerticalAnimation}
+          >
             <GithubIcon />
           </S.MenuLink>
-          <S.MenuLink href={navbarData?.linkedinUrl} target="_blank">
+          <S.MenuLink
+            href={navbarData?.linkedinUrl}
+            target="_blank"
+            variants={textVerticalAnimation}
+          >
             <LinkedinIcon />
           </S.MenuLink>
-          <S.MenuLink id="dev_icon" href={navbarData.devToUrl} target="_blank">
+          <S.MenuLink
+            id="dev_icon"
+            href={navbarData.devToUrl}
+            target="_blank"
+            variants={textVerticalAnimation}
+          >
             <DevIcon />
           </S.MenuLink>
           {windowDimensions.innerWidth < 1023 ? (
             <S.MenuLink
               href={`mailto:${navbarData.email}?Subject=Hello%20Victor`}
               target="_top"
+              variants={{
+                hidden: { y: 50, opacity: 0 },
+                visible: {
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    delay: 2.25
+                  }
+                }
+              }}
             >
               <EmailIcon />
             </S.MenuLink>
@@ -88,6 +123,18 @@ const Navbar: React.FC = () => {
               href={`mailto:${navbarData.email}?Subject=Hello%20Victor`}
               target="_top"
               style={{ opacity: 1 }}
+              variants={{
+                hidden: { opacity: 0 },
+
+                visible: {
+                  opacity: 1,
+                  scale: [1, 1.3, 1],
+                  transition: {
+                    duration: 0.6,
+                    ease: 'easeInOut'
+                  }
+                }
+              }}
             >
               get in touch
             </S.GetInTouchButton>

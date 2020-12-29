@@ -1,8 +1,13 @@
 import React from 'react'
-
 import * as S from './AboutMe.elements'
 
 import Photo from '@static/photo.svg'
+
+import {
+  container,
+  photoAnimation,
+  textVerticalAnimation
+} from '@utils/animations'
 
 const aboutMeData = {
   title: 'Victor Silva',
@@ -14,24 +19,33 @@ this, using mainly React, React Native and Node.js.`
 
 const AboutMe: React.FC = () => {
   return (
-    <S.Wrapper id="about_me">
+    <S.Wrapper
+      id="about_me"
+      variants={container}
+      initial="hidden"
+      animate="visible"
+    >
       <S.Body>
-        <S.TitleContent title="developer">
+        <S.TitleContent title="developer" itemAnimation={textVerticalAnimation}>
           <S.TitleContainer>
             <S.Title>{aboutMeData?.title}</S.Title>
           </S.TitleContainer>
         </S.TitleContent>
-        <S.PhotoContainer>
+        <S.PhotoContainer variants={photoAnimation}>
           <S.Photo>
             <Photo />
           </S.Photo>
         </S.PhotoContainer>
-        <S.DescriptionContent title="about me" className="about-me">
+        <S.DescriptionContent
+          title="about me"
+          className="about-me"
+          itemAnimation={textVerticalAnimation}
+        >
           <S.DescriptionContainer>
             <S.Description>{aboutMeData?.description}</S.Description>
           </S.DescriptionContainer>
         </S.DescriptionContent>
-        <S.IndicatorContainer>
+        <S.IndicatorContainer variants={photoAnimation}>
           <S.LinkToSection href="#experiences_and_technologies">
             <S.ArrowDown src="/arrow_down.svg" />
           </S.LinkToSection>

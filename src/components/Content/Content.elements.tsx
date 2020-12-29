@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: min-content min-content min-content;

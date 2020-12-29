@@ -1,12 +1,13 @@
 import { HTMLAttributes } from 'react'
 import styled from 'styled-components'
 import { Container } from '../../styles/global'
+import { motion } from 'framer-motion'
 
 interface NavbarMenuOptionProps
   extends React.DetailsHTMLAttributes<HTMLAttributes<HTMLLinkElement>> {
   active?: number // 0 == about_me, 1 == experiences_and_technologies, 2 == projects
 }
-export const Wrapper = styled.header`
+export const Wrapper = styled(motion.header)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +55,7 @@ export const MenuOptions = styled.div`
   }
 `
 
-export const MenuOption = styled.a<NavbarMenuOptionProps>`
+export const MenuOption = styled(motion.a)<NavbarMenuOptionProps>`
   font: ${props => props.theme.fonts.navbar};
   color: ${props => props.theme.colors.text};
 
@@ -84,7 +85,7 @@ export const MenuLinks = styled.div`
   }
 `
 
-export const MenuLink = styled.a`
+export const MenuLink = styled(motion.a)`
   text-decoration: none;
 
   cursor: pointer;
@@ -97,7 +98,7 @@ export const MenuLink = styled.a`
   }
 `
 
-export const GetInTouchButton = styled.a`
+export const GetInTouchButton = styled(motion.a)`
   display: flex;
   align-items: center;
   justify-content: center;

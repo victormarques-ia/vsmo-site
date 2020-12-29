@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import Content from '@components/Content/Content'
 import { Container } from '../../styles/global'
+import { motion } from 'framer-motion'
 
-export const Wrapper = styled.section`
+export const Wrapper = styled(motion.section)`
   display: flex;
 
   flex-direction: column;
@@ -51,7 +52,7 @@ export const Title = styled.h1`
   }
 `
 
-export const PhotoContainer = styled.div`
+export const PhotoContainer = styled(motion.div)`
   grid-area: aboutMePhotoContainer;
 
   position: relative;
@@ -121,7 +122,7 @@ export const ArrowDown = styled.img`
 `
 export const ScrollDown = styled.img``
 
-export const IndicatorContainer = styled.div`
+export const IndicatorContainer = styled(motion.div)`
   grid-area: indicatorContainer;
 
   display: flex;
