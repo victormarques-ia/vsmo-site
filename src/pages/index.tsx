@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 
 import { AppWrapper } from '../styles/global'
@@ -12,6 +12,10 @@ import {
 } from '@components/index'
 
 const Home: React.FC = () => {
+  useEffect(() => {
+    window.location.hash = ''
+  }, [])
+
   return (
     <div>
       <Head>

@@ -37,7 +37,6 @@ const Navbar: React.FC = () => {
       (sectionName, index) => {
         const el = document.getElementById(sectionName)
         if (elementInViewport(el)) {
-          console.log(el.id)
           setSelectedSection(index)
         }
       }
@@ -53,28 +52,17 @@ const Navbar: React.FC = () => {
     <S.Wrapper variants={container} initial="hidden" animate="visible">
       <S.Body>
         <S.MenuOptions>
-          <S.MenuOption
-            id="0"
-            href="#about_me"
-            active={selectedSection}
-            variants={textVerticalAnimation}
-          >
+          <S.MenuOption id="0" href="#about_me" active={selectedSection}>
             {'<home>'}
           </S.MenuOption>
           <S.MenuOption
             id="1"
             href="#experiences_and_technologies"
             active={selectedSection}
-            variants={textVerticalAnimation}
           >
             {'<experiences>'}
           </S.MenuOption>
-          <S.MenuOption
-            id="2"
-            href="#projects"
-            active={selectedSection}
-            variants={textVerticalAnimation}
-          >
+          <S.MenuOption id="2" href="#projects" active={selectedSection}>
             {'<projects>'}
           </S.MenuOption>
         </S.MenuOptions>
@@ -111,7 +99,7 @@ const Navbar: React.FC = () => {
                   y: 0,
                   opacity: 1,
                   transition: {
-                    delay: 2.25
+                    delay: 1.35
                   }
                 }
               }}

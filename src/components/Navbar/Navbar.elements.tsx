@@ -2,7 +2,7 @@ import { HTMLAttributes } from 'react'
 import styled from 'styled-components'
 import { Container } from '../../styles/global'
 import { motion } from 'framer-motion'
-
+import { textVerticalAnimation } from '@utils/animations'
 interface NavbarMenuOptionProps
   extends React.DetailsHTMLAttributes<HTMLAttributes<HTMLLinkElement>> {
   active?: number // 0 == about_me, 1 == experiences_and_technologies, 2 == projects
@@ -62,8 +62,6 @@ export const MenuOption = styled(motion.a)<NavbarMenuOptionProps>`
   opacity: ${props => (props.active === Number(props.id) ? 1 : 0.25)};
 
   text-decoration: none;
-
-  cursor: pointer;
 `
 
 export const MenuLinks = styled.div`

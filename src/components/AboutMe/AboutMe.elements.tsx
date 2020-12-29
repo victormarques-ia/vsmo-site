@@ -37,7 +37,7 @@ export const Body = styled(Container)`
 
 export const TitleContent = styled(Content)`
   grid-area: aboutMeTitleContent;
-
+  z-index: 2;
   align-self: center;
 `
 export const TitleContainer = styled.div``
@@ -54,7 +54,7 @@ export const Title = styled.h1`
 
 export const PhotoContainer = styled(motion.div)`
   grid-area: aboutMePhotoContainer;
-
+  z-index: 1;
   position: relative;
   display: flex;
   justify-content: center;
@@ -66,9 +66,6 @@ export const PhotoContainer = styled(motion.div)`
 `
 export const Photo = styled.div`
   position: absolute;
-  z-index: -5;
-
-  transition: all 0.5s ease;
 
   svg {
     width: 100%;
@@ -91,7 +88,7 @@ export const Photo = styled.div`
 
 export const DescriptionContent = styled(Content)`
   grid-area: aboutMeDescriptionContent;
-
+  z-index: 2;
   align-self: center;
 `
 

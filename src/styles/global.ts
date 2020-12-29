@@ -41,7 +41,7 @@ export const AppWrapper = styled.div`
   display: grid;
   grid-template-rows: min-content min-content min-content min-content;
 
-  background-image: url('/bg.png');
+  background-image: url('/bg.svg');
   background-repeat: no-repeat;
   background-size: cover;
 `
