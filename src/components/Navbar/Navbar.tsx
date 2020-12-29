@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
                   y: 0,
                   opacity: 1,
                   transition: {
-                    delay: 1.35
+                    delay: 1.33
                   }
                 }
               }}
