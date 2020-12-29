@@ -1,9 +1,9 @@
 # Personal Website
 ## Introduction
-This project is created to provide a website to show who I am and what I work with, besides being a way to learn [**Next.js**](https://nextjs.org/).
+This project was created to talk about who I am and what I work with. In addition, I also show my skills as a developer and learn about [**Next.js**](https://nextjs.org/).
 
 ## Preview
-...
+![](https://github.com/victormarques-ia/projects-gif/blob/main/gifs/vsmo_preview.gif)
 
 ## Technologies
 This is a web application writted in TypeScript using [**Next.js**](https://nextjs.org/) as library for building user interfaces with server side rendering, [**styled-components**](https://styled-components.com/) as CSS-in-JS/TS tool and for animation I used [**framer-motion**](https://www.framer.com/motion/) .
