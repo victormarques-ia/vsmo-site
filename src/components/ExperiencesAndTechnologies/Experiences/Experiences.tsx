@@ -22,6 +22,11 @@ const experiencesData = [
     id: 4,
     title: 'Developer at Marta Inteligência Imobiliária',
     date: '2021-now'
+  },
+  {
+    id: 5,
+    title: 'Software Engineer at Capyba Software Studio',
+    date: '2021-now'
   }
 ]
 
