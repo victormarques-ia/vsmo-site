@@ -16,12 +16,12 @@ const technologiesData = [
   {
     id: 3,
     name: 'Flutter',
-    size: 1.2
+    size: 1.8
   },
   {
     id: 4,
     name: 'React Native',
-    size: 2
+    size: 1.7
   },
   {
     id: 5,
@@ -36,7 +36,7 @@ const technologiesData = [
   {
     id: 7,
     name: 'Node.js',
-    size: 2
+    size: 1.8
   }
 ]
 
